@@ -94,14 +94,12 @@ body {
 }
 
 .middle {
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
 }
 
 .result-section {
-  display: flex;
+  display: none;
   justify-content: center;
   align-content: flex-start;
   margin: 0;

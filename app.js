@@ -3,10 +3,10 @@ const ratingForm = document.querySelector(".rating-form");
 const cardDesc = document.querySelector(".card-desc");
 const cardHeader = document.querySelector(".card-header");
 const cardImg = document.querySelector(".card-img");
-const cardTop = document.querySelector("#card-top");
-//const cardResult = document.querySelector(".result-section");
+const cardImg2 = document.querySelector(".card-img2");
+const cardTop = document.querySelector(".card-top");
+const resultSection = document.querySelector(".result-section");
 const cardResult = document.querySelector(".card-result");
-cardResult.style.display = "none";
 
 console.log("JAVASCRIPT IS RUNNING!");
 
@@ -21,11 +21,7 @@ for (let rate of rating) {
   });
 }
 
-ratingForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const ratingValue = document.querySelector(".rating-clicked").value;
-  console.log(ratingValue);
-  ratingForm.remove();
+function changeText() {
   cardHeader.innerText = `Thank you!`;
   cardDesc.innerText = `We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!`;
   cardImg.src = "./images/illustration-thank-you.svg";
@@ -34,7 +30,20 @@ ratingForm.addEventListener("submit", (e) => {
   cardTop.classList.add("middle");
   cardHeader.classList.add("middle");
   cardDesc.classList.add("middle");
-  cardResult.style.display = "flex";
+}
+
+function showResult() {
+  resultSection.style.display = "flex";
+  resultSection.style.marginBottom = "-40px";
+}
+
+ratingForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const ratingValue = document.querySelector(".rating-clicked").value;
+  console.log(ratingValue);
+  ratingForm.remove();
+  changeText();
+  showResult();
   cardResult.innerText = `You selected ${ratingValue} out of 5`;
   //cardResult.add();
   //cardImg.style.backgroundColor = "#1f2632";
