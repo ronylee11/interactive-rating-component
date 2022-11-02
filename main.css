@@ -133,3 +133,9 @@ body {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
 }
+
+@media (max-width: 375px) {
+  .card {
+    transform: scale(0.9);
+  }
+}
