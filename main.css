@@ -9,6 +9,12 @@
   color: hsl(228, 45%, 44%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* Start of Responsive Styles */
 
 body {
@@ -17,7 +23,7 @@ body {
   font-family: Overpass, sans-serif;
   font-size: 15px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
